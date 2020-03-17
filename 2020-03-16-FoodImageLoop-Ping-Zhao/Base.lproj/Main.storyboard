@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,21 +12,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_020_03_16_FoodImageLoop_Ping_Zhao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9kQ-2c-Stz">
-                                <rect key="frame" x="20" y="56" width="374" height="300"/>
+                                <rect key="frame" x="20" y="56" width="335" height="300"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="uAt-94-P2A">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="9Bq-hk-6P3"/>
                                             <constraint firstAttribute="height" constant="250" id="nn7-P4-Vds"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name: $Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-aw-jax">
-                                        <rect key="frame" x="0.0" y="255" width="374" height="45"/>
+                                        <rect key="frame" x="0.0" y="255" width="335" height="45"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,7 +37,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH6-jP-7kc">
-                                <rect key="frame" x="20" y="406" width="374" height="32"/>
+                                <rect key="frame" x="20" y="406" width="335" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="2xB-7P-ZSr"/>
                                 </constraints>
