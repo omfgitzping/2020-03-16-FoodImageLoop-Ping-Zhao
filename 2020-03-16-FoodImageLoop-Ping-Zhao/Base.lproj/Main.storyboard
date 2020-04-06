@@ -47,27 +47,51 @@
                                     <action selector="nextDishButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whd-GE-sBv"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="rKF-P9-ub9">
+                                <rect key="frame" x="20" y="455" width="335" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A44-IC-O6W">
+                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMi-ZW-Sfw">
+                                        <rect key="frame" x="286" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="playSoundToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="rT0-1e-vfT"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rKF-P9-ub9" secondAttribute="height" multiplier="334:31" id="m6Y-8e-E3D"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rKF-P9-ub9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3g4-eg-Vh6"/>
+                            <constraint firstItem="rKF-P9-ub9" firstAttribute="top" secondItem="bH6-jP-7kc" secondAttribute="bottom" constant="17" id="4nJ-hO-wVX"/>
                             <constraint firstItem="9kQ-2c-Stz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dgw-ol-sf5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9kQ-2c-Stz" secondAttribute="trailing" constant="20" id="JbD-Lb-SA5"/>
                             <constraint firstItem="bH6-jP-7kc" firstAttribute="top" secondItem="9kQ-2c-Stz" secondAttribute="bottom" constant="50" id="Yvw-dj-Oi3"/>
                             <constraint firstItem="bH6-jP-7kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aCY-Ng-Vo2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rKF-P9-ub9" secondAttribute="trailing" constant="20" id="q2v-PD-j6c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bH6-jP-7kc" secondAttribute="trailing" constant="20" id="qWr-7P-ssn"/>
+                            <constraint firstItem="rKF-P9-ub9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rdj-56-RcF"/>
                             <constraint firstItem="9kQ-2c-Stz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="vhG-mH-aTg"/>
-                            <constraint firstItem="bH6-jP-7kc" firstAttribute="centerX" secondItem="9kQ-2c-Stz" secondAttribute="centerX" id="wi8-nb-jdy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="foodImageView" destination="uAt-94-P2A" id="XWE-kd-NNv"/>
                         <outlet property="foodPriceLabel" destination="6Cw-aw-jax" id="8a8-WG-n6p"/>
+                        <outlet property="playSoundSwitch" destination="BMi-ZW-Sfw" id="bq8-pl-ZHy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>
+            <point key="canvasLocation" x="130.40000000000001" y="126.35467980295567"/>
         </scene>
     </scenes>
     <resources>

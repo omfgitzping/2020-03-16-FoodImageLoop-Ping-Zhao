@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -14,13 +15,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var foodPriceLabel: UILabel!
     
+    @IBOutlet weak var playSoundSwitch: UISwitch!
+    
     let foodImageArray = ["chicken", "hamburger", "noodle", "pasta", "pizza", "salad", "steak"]
     
     let foodNameArray = ["Roasted Chicken", "Classic Burger", "Chicken Noodle Soup", "Bow-Tie Pasta", "Pepperoni Pizza", "Italian Salad", "Grilled Steak"]
     
     let foodPriceArray = [13.99, 13.99, 11.99, 12.99, 11.99, 10.99, 15.99]
     
+    let soundArray = ["applause02", "cheering01", "cheering02", "gong", "guitar", "magic", "movie"]
+    
     var foodIndex = 0
+    
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +35,19 @@ class ViewController: UIViewController {
         foodImageView.image = UIImage(named: foodImageArray[0])
         
         foodPriceLabel.text = foodNameArray[0] + ": $" + "\(foodPriceArray[0])"
+    }
+    
+    func playSound(name: String) {
+        if let sound = NSDataAsset(name: name) {
+                do {
+                    try audioPlayer = AVAudioPlayer(data: sound.data)
+                    audioPlayer.play()
+                } catch {
+                    print("ERROR: \(error.localizedDescription) Could not initialize AVAudio")
+            }
+        } else {
+            print("ERROR: Could not read data from file sound0")
+        }
     }
 
 
@@ -39,7 +59,15 @@ class ViewController: UIViewController {
         foodImageView.image = UIImage(named: foodImageArray[foodIndex])
         foodPriceLabel.text = foodNameArray[foodIndex] + ": $" + "\(foodPriceArray[foodIndex])"
         
-        
+        if playSoundSwitch.isOn {
+        playSound(name: soundArray[foodIndex])
+        }
+    }
+    
+    @IBAction func playSoundToggle(_ sender: UISwitch) {
+        if !sender.isOn && audioPlayer != nil{
+                audioPlayer.stop()
+            }
     }
 }
 
